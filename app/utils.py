@@ -1,15 +1,7 @@
 import os
 from typing import List
-from app import Driver
-
-
-class MyException(Exception):
-    pass
-
-
-def check_filepath(filepath: str) -> None:
-    if not os.path.isfile(filepath):
-        raise MyException(f'{filepath} is not a file path')
+from class_driver import Driver
+from check_funktion import check_filepath
 
 
 def open_file(filepath: str) -> List[str]:

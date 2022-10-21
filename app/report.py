@@ -1,5 +1,5 @@
 from utils import path_dispatcher, open_file, sort_drivers
-from app import Driver
+from class_driver import Driver
 from typing import List
 
 

@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 import datetime
 from typing import List
+from check_funktion import check_type
 
 
 @dataclass
@@ -15,6 +16,7 @@ class Driver:
     incorrect_logged_drivers = []
 
     def abbreviations_decoding(self, driver_abr_string: str) -> None:
+        check_type(string=driver_abr_string)
         self.abbreviation, self.name, self.team = driver_abr_string.split('_')
 
     def prepare_time_string(self, log_list: List[str]) -> str:
